@@ -35,8 +35,7 @@ const switchAndCloseTab = () => {
     I.closeCurrentTab();
 };
 
-// TODO: fix in code
-Scenario.skip('Create call and check call history from addressbook', async (I, users, contacts, dialogs) => {
+Scenario('Create call and check call history from addressbook', async (I, users, contacts, dialogs) => {
 
     const [user1, user2] = users;
 
