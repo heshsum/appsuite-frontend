@@ -218,8 +218,7 @@ Scenario('Call history is not visible when empty', (I, users) => {
     I.waitForVisible('.dropdown.open .call-history-item');
 });
 
-// TODO: fix behaviour in code
-Scenario.skip('Call history closes on second click', (I, users) => {
+Scenario('Call history closes on second click', (I, users) => {
 
     const [user1, user2] = users;
     const { primaryEmail, display_name } = user2.userdata;
