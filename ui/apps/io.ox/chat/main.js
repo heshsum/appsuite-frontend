@@ -393,6 +393,9 @@ define('io.ox/chat/main', [
 
         resubscribeChat: function (roomId) {
             var model = data.chats.get(roomId);
+
+            if (model.isActive()) return this.showChat(roomId);
+
             model.toggleRecent().then(
                 this.showChat.bind(this, roomId)
             );
